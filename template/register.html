@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Register
+        </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <canvas id="c"></canvas>
+                <div class="brand-title">Register
+                    <div class=""inputs>
+                        <form name="myForm" autofocus autocomplete="off" required action="{{ url_for('register') }}" method="post">
+                            <input  autofocus id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
+                            <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/>
+                            <input id="email" autocomplete="off" onsubmit="myFunction()" name="email" type="text" placeholder="E-mail">
+                            <input id="chk" type="submit" class="btn" value="Sign In">
+                            <p class="bottom">Already have an account?</p>
+                            <a class="bottom" href="{{url_for('login')}}">Login</a>
+                            <div class="msg">{{ msg }}</div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </body>
+    <script src ="static/register.js"></script>
+</html>
